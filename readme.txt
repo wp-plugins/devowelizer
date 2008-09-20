@@ -13,13 +13,13 @@ The Devowelizer plugin replaces the vowels in most bad language within your own 
 
 The Devowelizer plugin replaces the vowels in most bad language within your own content and within comments.
 
-Visit http://www.richardsramblings.com/plugins/wp-devowelizer/ for more information, usage, and release notes.
+Visit the plugin homepage for more information, usage, and release notes.
 
 == Installation ==
 
 1. Copy all the files into the "wp-content/plugins/devowelizer/" directory.
 1. Activate the plugin in the WordPress Plugin Admin panel.
 
-Visit http://www.richardsramblings.com/plugins/wp-devowelizer/ for more options, or for information on installing into WordPress MU.
+Visit [Richard's Ramblings][rr] for more information and options.
 
-
+[rr]: http://www.richardsramblings.com/plugins/wp-devowelizer/
