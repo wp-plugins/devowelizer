@@ -3,7 +3,7 @@ Contributors: rlecour
 Donate link: http://www.richardsramblings.com/
 Tags: comments
 Requires at least: 2.1.2
-Tested up to: 2.5.1
+Tested up to: 2.6.2
 Stable tag: 1.10
 
 
