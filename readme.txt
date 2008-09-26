@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: rlecour
-Donate link: http://www.richardsramblings.com/
+Donate link: http://www.richardsramblings.com/donate/
 Tags: comments
 Requires at least: 2.1.2
 Tested up to: 2.6.2
