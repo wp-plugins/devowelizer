@@ -7,7 +7,7 @@ Description: The Devowelizer plugin replaces the vowels in most bad language wit
 Author: Richard D. LeCour
 Author URI: http://www.richardsramblings.com/
 
-Copyright (c) 2006-2008 Richard D. LeCour
+Copyright (c) 2006-2009 Richard D. LeCour
 
 TO INSTALL INTO WORDPRESS:
 1. Copy all the files into a new 'wp-content/plugins/devowelizer/' folder.
