@@ -1,13 +1,13 @@
 <?php
 /*
-Plugin Name: Devowelizer
-Version: 1.10
+Plugin Name: RR Devowelizer
+Version: 1.21
 Plugin URI: http://www.richardsramblings.com/plugins/wp-devowelizer/
-Description: The Devowelizer plugin replaces the vowels in most bad language within your own content and within comments left by visitors. If the word "devowelizer" was a bad word, it would appear as "dëvøwëlìzër".
+Description: The Devowelizer plugin replaces the vowels in most bad language within your own content and from comments left by visitors. If the word "devowelizer" was a bad word, it would appear as "dëvøwëlìzër". Visual profanity filtering, without censoring.
 Author: Richard D. LeCour
 Author URI: http://www.richardsramblings.com/
 
-Copyright (c) 2006-2009 Richard D. LeCour
+Copyright (c) 2006-2012 Richard D. LeCour
 
 TO INSTALL INTO WORDPRESS:
 1. Copy all the files into a new 'wp-content/plugins/devowelizer/' folder.
@@ -20,12 +20,12 @@ global $devowelizer_old_letters, $devowelizer_new_letters, $devowelizer_list;
 $devowelizer_old_letters = array(
       "a", "e", "i", "o", "u", "y",
       "A", "E", "I", "O", "U", "Y",
-      "c", "C", "D", "s"
+      "c", "C", "D", "n", "s", "t"
 );
 $devowelizer_new_letters = array(
       "&#225;", "&#235;", "&#236;", "&#248;", "&#251;", "&#255;", // áëìøûÿ
       "&#195;", "&#202;", "&#205;", "&#216;", "&#217;", "&#376;", // ÃÊÍØÙY
-      "&#231;", "&#199;", "&#208;", "&#353;" // çÇÐš
+      "&#231;", "&#199;", "&#208;", "&#326;", "&#353;", "&#359;"  // çÇÐņšŧ
 );
 
 function devowelizer($text) {
@@ -52,15 +52,16 @@ function devowelizer_work($text) {
       $word_list = array();
       $file_name = dirname(__FILE__)."/words.txt"; // GRABS THE DEFAULT WORDS
          if (file_exists($file_name)) {
-            $word_list += file($file_name);
+            $word_list += file($file_name, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
          }
       $file_name = dirname(__FILE__)."/words-custom.txt"; // STORES YOUR CUSTOM WORDS
          if (file_exists($file_name)) {
             $word_list += file($file_name);
          }
-      $devowelizer_list[]= "/()\[devowelize[r]?\]([^\[]+)\[\/devowelize[r]?\]/si";
-      foreach($word_list as $word) {
+      $devowelizer_list[] = "/()\[devowelize[r]?\]([^\[]+)\[\/devowelize[r]?\]/si";
+      foreach ($word_list as $word) {
          $word = trim($word);
+         if (substr($word, 0, 1) == '#') { continue; }
          $regex = "/(href=[\'\"]?[\w\-\.\/\:]*)?(";
          if (substr($word, strlen($word) -1, 1) == '*') {
             if (substr($word, 0, 1) == '*') {
@@ -72,7 +73,7 @@ function devowelizer_work($text) {
             $regex .= "\b".$word."\b";
          }
          $regex .= ")/si";
-         $devowelizer_list[]= $regex;
+         $devowelizer_list[] = $regex;
       }
    }
    $text = preg_replace_callback($devowelizer_list, "devowelizer_callback", $text);

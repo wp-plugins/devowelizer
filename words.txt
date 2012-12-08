@@ -1,76 +1,41 @@
-*damn*
-*f\s*c\s*u\s*k*
-*f\s*u\s*[kq]*
-*f\s*u\s*c\s*k*
-*fook*
-*phu[ckq]*
-[ck]o[c]?k[s]?
-[ck]o[ckx]+\-*su[ckx]*
-[ck]u[n]+i[l]+ing*
-[ck]um
-[ck]unt*
-a[s]+hol*
-ahole*
-ar[s5]e
-ar[s5]eh*
-ass
-asses
-assfac*
-asswip*
-bast[ae]rd*
-be[a]?stial*
-biatch*
-bitch*
-blow\s*job*
-boff*
-bollo[ckx]*
-boob[s]?
-bugger
-bullshit*
-butth*
-buttwip*
-clit
-crap
-dick
-dickh*
-dildo*
-dyke*
-ejaculat*
-fag
-fagg*
-fags
-fe[l]+atio
+## f*ck, and its alternatives (anywhere inside a word)
+*(?:f\s*(?:c\s*u|u(?:\s*[ck])?)\s*[kq]|fook|phu[ckq])*
+
+## more mid-word no-no's
+*(?:bukake|damn)*
+
+## common compounds with trailing wildcards, such as sh*theads, c*cksucking, etc.
+(?:ass|butt|clit|cock|dick|shit|sperm).?(?:ban?g|b(?:ea|i)t|fac|h(?:ead|ol)|juic|kiss|lick|milk|munch|suck|wip)*
+
+## some simple common B words, with trailing wildcards
+b(?:ast[ae]rd|ea?stial|ia?tch|low\s*job|o(?:ff|llo[ckx]|obs?)|u(?:gger|llshit))*
+
+## ethnic slurs, such as n*gger
+(?:camel\s*jock|nigg(?:a|er|uh))*
+(?:k[iy]ke)s
+
+## words with trailing wildcards, such as @ssholes, m*sturbating, sh*ttiest
+(?:as*hol|[ck]un(?:n?ill?ing|t)|ejaculat|fagg|masturb|penis|s(?:hit|lu)t|whore)*
+(?:ar[s5]eh|ji(?:sm|z[mz]?))*
+
+## common @ss words and their -es plurals, such as fat@ss, jack@sses, etc. (no wildcards)
+(?:co(?:ck|on)|d(?:ick|um+b?)|fat|gay|(?:ja|su)ck|la(?:me|rd)|punk|shit)?ass(?:es)?
+
+## common -off compounds, such as "j*cking off" (no wildcards)
+(?:j(?:ac|er)k|piss)(?:ed|ing|e?s)?\s*off
+
+## nouns that double as (loosely) conjugated verbs, such as p*ssing, w@nkers, etc. (no wildcards)
+(?:crapp?|p[iu]ss|wank)(?:e(?:d|rs?)|ies|ing|[ey]+s)
+
+## a few nouns and their -s plurals (no leading/trailing wildcards)
+(?:ar[s5]ed?|clit|di(?:ck|ldo)|dyke|fag|hell|hooker|kawk|p(?:ecker|rick|(?:or|ro)no?)|shit|twat|vagina)s?
+
+## a few words by themselves (no leading/trailing wildcards)
+(?:[ck](?:oc?ks?|um)|fell?atio|sodding)
+
+## a few foreign language epithets
+(?:cojones|(?:cago|carajo|chinga|chucha|concha|pinga|puta).{0,9}[mp]adre)
+
+## the small miscellaneous bucket for the rest
 gang\s*bang*
 gay\s*sex
-hell
-hooker*
-jerk(ed|ing)?\s*off
-jism
-jiz[mz]?*
-kawk
-kike*
-kunt*
-masturb*
-nigga*
-nigger*
-pecker
-penis*
-piss
-pisse[drs]+
-pissing
-porn
-prick
-pron
-pussies
-pussy[s]?
-shit
-shith*
-shits
-shitt*
-slut*
-troll
-twat
-twats
-vagina
-wanker
-whore*
