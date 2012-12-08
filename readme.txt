@@ -18,6 +18,7 @@ Visit the plugin homepage for more information, usage, and release notes.
 == Installation ==
 
 1. Either install the plugin using the Add New Plugin admin panel in your WordPress installation; or copy all the files manually into the "wp-content/plugins/devowelizer/" directory, setting appropriate file and owner permissions.
+
 2. Activate the plugin in the WordPress Plugin admin panel.
 
 Visit [Richard's Ramblings][rr] for more information and options.
