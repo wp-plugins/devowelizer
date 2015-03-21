@@ -3,7 +3,7 @@ Contributors: rlecour
 Donate link: http://www.richardsramblings.com/donate/
 Tags: comments, pages, posts, keywords, filter, filtered, profanity, swearing, cursing, language
 Requires at least: 2.1.2
-Tested up to: 3.5
+Tested up to: 4.1.1
 Stable tag: 1.21
 
 
